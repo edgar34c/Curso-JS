@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de nacionalidade</title>
+</head>
+<body>
+    <input type="text" name="txtNasc" id="txtNasc" placeholder="Digite o pais que vive">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar(){
+            var txtNasc = window.document.querySelector('input#txtNasc')
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `Você está vivendo no ${txtNasc.value}`
+            if(txtNasc.value == 'Brasil'){
+                res.innerHTML += '<br> Você é brasileiro'
+            }else{
+                res.innerHTML += '<br> Você é estrangeiro'
+            }
+        }
+    </script>
+
+</body>
+</html>
