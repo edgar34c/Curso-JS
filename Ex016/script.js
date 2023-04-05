@@ -8,14 +8,18 @@ function verificar(){
         window.alert('[ERRO] Verifique se o ano digitado etá correto')
     }else{
         var idade = ano - txtAno.value
+        //pega dados do radio
         var fsex = document.getElementsByName('radsex')
         var genero = ''
+        //cria elemento img
         var img = document.createElement('img')
+        //passa id para o img
         img.setAttribute('id', 'foto')
 
         if (fsex[0].checked) {
             genero = 'Homem'
             if (idade >= 0 && idade < 11) {
+                //passa imagem para img criado com JS
                 img.setAttribute('src', 'menino.jpg')
             } else if(idade < 21){
                 img.setAttribute('src', 'jovem-homem.jpg')
@@ -37,8 +41,11 @@ function verificar(){
             }
         }
 
+        //alinha texto no centro na div
         res.style.textAlign = 'center'
+        //passa texto para a div
         res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
+        //adiciona o elemento img na div
         res.appendChild(img)
     }
 }

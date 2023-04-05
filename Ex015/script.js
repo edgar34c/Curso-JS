@@ -7,15 +7,13 @@ function carregar(){
     msg.innerHTML = `Agora são ${hora} horas.`
 
     if (hora >= 0 && hora < 12) {
-        //bom dia
+        //passa imagem o elemento img que já existe no html
         img.src = 'manha.jpg'
         document.body.style.background = '#ffe181'
     } else if(hora >= 12 && hora <= 18){
-        //tarde
         img.src = 'tarde.jpg'
         document.body.style.background = '#e6781e'
     }else{
-        //noite
         img.src = 'noite.jpg'
         document.body.style.background = '#123142'
     }
